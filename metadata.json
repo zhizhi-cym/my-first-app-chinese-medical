@@ -1,0 +1,6 @@
+{
+  "name": "中医中药背诵打卡系统",
+  "description": "结合Duolingo打卡机制与艾宾浩斯间隔重复算法的中医中药背诵学习应用",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
