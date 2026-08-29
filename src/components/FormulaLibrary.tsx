@@ -174,17 +174,14 @@ export const FormulaLibrary: React.FC<FormulaLibraryProps> = ({
     <div className="max-w-6xl mx-auto px-4 sm:px-6 py-6 space-y-6 text-stone-900 animate-fade-in">
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-stone-200 pb-4">
-        <div>
-          <h2 className="text-2xl font-serif font-bold text-stone-900 flex items-center gap-2">
-            <FlaskConical className="text-amber-600" size={24} />
-            <span>方剂学数据库</span>
-            <span className="text-xs font-sans px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-900 border border-amber-300 font-bold">
-              收录 {formulas.length} 首经典名方
-            </span>
+        <div className="flex items-center gap-2.5 flex-wrap sm:flex-nowrap">
+          <h2 className="text-2xl font-serif font-bold text-stone-900 flex items-center gap-2.5 shrink-0">
+            <Scroll className="text-amber-600" size={24} />
+            <span>方剂检索</span>
           </h2>
-          <p className="text-xs text-stone-600 mt-1">
-            涵盖解表、泻下、和解、清热、温里、补益等 20 大类名方、歌诀、主治与个性化药味/笔记管理
-          </p>
+          <span className="text-xs font-sans px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-900 border border-amber-300 font-bold whitespace-nowrap shrink-0">
+            收录 {formulas.length} 首经典名方
+          </span>
         </div>
 
         <div className="flex items-center gap-2 self-start sm:self-auto">

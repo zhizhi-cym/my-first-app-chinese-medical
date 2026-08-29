@@ -140,10 +140,10 @@ export const Navbar: React.FC<NavbarProps> = ({
             <Search size={15} />
             <span>
               {currentModuleId === 'formulas'
-                ? '方剂数据库'
+                ? '方剂检索'
                 : currentModuleId === 'acupoints'
-                ? '穴位数据库'
-                : '中药数据库'}
+                ? '穴位检索'
+                : '本草检索'}
             </span>
           </button>
 

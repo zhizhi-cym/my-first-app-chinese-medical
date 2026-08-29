@@ -5,6 +5,7 @@ import {
   BookOpen,
   X,
   Sparkles,
+  Leaf,
 } from 'lucide-react';
 import { CardProgress, HerbItem } from '../types';
 import { CATEGORIES_LIST } from '../data/herbs';
@@ -74,23 +75,21 @@ export const HerbLibrary: React.FC<HerbLibraryProps> = ({
     <div className="max-w-6xl mx-auto px-4 sm:px-6 py-6 space-y-6 text-stone-900 animate-fade-in">
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-stone-200 pb-4">
-        <div>
-          <h2 className="text-2xl font-serif font-bold text-stone-900 flex items-center gap-2">
-            <span>本草药材搜索</span>
-            <span className="text-xs font-sans px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-300 font-bold">
-              收录 {herbs.length} 味中药
-            </span>
+        <div className="flex items-center gap-2.5 flex-wrap sm:flex-nowrap">
+          <h2 className="text-2xl font-serif font-bold text-stone-900 flex items-center gap-2.5 shrink-0">
+            <Leaf className="text-emerald-600" size={24} />
+            <span>本草药材检索</span>
           </h2>
-          <p className="text-xs text-stone-600 mt-1">
-            快速搜索中药材、权威配图、药典性味归经、核心功效与记忆歌诀
-          </p>
+          <span className="text-xs font-sans px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-300 font-bold whitespace-nowrap shrink-0">
+            收录 {herbs.length} 味中药
+          </span>
         </div>
 
         {filteredHerbs.length > 0 && (
           <button
             type="button"
             onClick={() => onStartCustomDrill(filteredHerbs.map((h) => h.id))}
-            className="px-4 py-2 rounded-xl text-xs font-bold bg-emerald-600 hover:bg-emerald-500 text-white flex items-center gap-1.5 shadow-sm self-start sm:self-auto transition-colors"
+            className="px-4 py-2 rounded-xl text-xs font-bold bg-emerald-600 hover:bg-emerald-500 text-white flex items-center gap-1.5 shadow-sm self-start sm:self-auto transition-colors whitespace-nowrap cursor-pointer"
           >
             <BookOpen size={15} />
             <span>背诵当前检索结果 ({filteredHerbs.length}味)</span>

@@ -5,6 +5,7 @@ import {
   BookOpen,
   X,
   Sparkles,
+  Compass,
   Activity,
   MapPin,
   CheckCircle2,
@@ -115,24 +116,21 @@ export const AcupointLibrary: React.FC<AcupointLibraryProps> = ({
     <div className="max-w-6xl mx-auto px-4 sm:px-6 py-6 space-y-6 text-stone-900 animate-fade-in">
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-stone-200 pb-4">
-        <div>
-          <h2 className="text-2xl font-serif font-bold text-stone-900 flex items-center gap-2">
-            <Activity className="text-teal-600" size={24} />
-            <span>针灸穴位数据库</span>
-            <span className="text-xs font-sans px-2.5 py-0.5 rounded-full bg-teal-100 text-teal-800 border border-teal-300 font-bold">
-              全量收录 361 十四经标准腧穴 + 38 经外奇穴
-            </span>
+        <div className="flex items-center gap-2.5 flex-wrap sm:flex-nowrap">
+          <h2 className="text-2xl font-serif font-bold text-stone-900 flex items-center gap-2.5 shrink-0">
+            <Compass className="text-teal-600" size={24} />
+            <span>穴位检索</span>
           </h2>
-          <p className="text-xs text-stone-600 mt-1">
-            十四经穴 361 穴全覆盖 · 经络循行 · 定位取穴要点 · 特定穴属性与歌诀速记
-          </p>
+          <span className="text-xs font-sans px-2.5 py-0.5 rounded-full bg-teal-100 text-teal-800 border border-teal-300 font-bold whitespace-nowrap shrink-0">
+            收录 361 个腧穴 + 38 个经外奇穴
+          </span>
         </div>
 
         {filteredAcupoints.length > 0 && (
           <button
             type="button"
             onClick={() => onStartCustomDrill(filteredAcupoints.map((a) => a.id))}
-            className="self-start sm:self-auto px-4 py-2 rounded-xl text-xs font-serif font-bold bg-teal-600 hover:bg-teal-500 text-white flex items-center gap-1.5 shadow-sm transition-colors"
+            className="self-start sm:self-auto px-4 py-2 rounded-xl text-xs font-serif font-bold bg-teal-600 hover:bg-teal-500 text-white flex items-center gap-1.5 shadow-sm transition-colors whitespace-nowrap cursor-pointer"
           >
             <BookOpen size={15} />
             <span>背诵当前筛选穴位 ({filteredAcupoints.length})</span>

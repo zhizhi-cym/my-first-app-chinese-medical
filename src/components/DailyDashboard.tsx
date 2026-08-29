@@ -75,6 +75,24 @@ export const DailyDashboard: React.FC<DailyDashboardProps> = ({
 
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 py-6 sm:py-8 space-y-6 text-stone-900 animate-fade-in">
+      {/* 0. Warm Welcome Blessing Banner */}
+      <div className="bg-gradient-to-r from-amber-50/90 via-emerald-50/80 to-teal-50/90 border border-emerald-200/90 rounded-2xl px-4 sm:px-5 py-3.5 flex items-center justify-between shadow-sm">
+        <div className="flex items-center gap-3">
+          <span className="text-2xl select-none animate-bounce-short">🌸</span>
+          <div>
+            <div className="text-sm font-serif font-bold text-stone-900 flex flex-wrap items-center gap-2">
+              <span>欢迎回来！</span>
+              <span className="text-xs font-sans font-bold text-emerald-800 bg-emerald-100/90 px-2.5 py-0.5 rounded-full border border-emerald-300">
+                fake it until make it，加油梦梦！
+              </span>
+            </div>
+            <p className="text-xs text-stone-600 mt-0.5 font-serif">
+              日拱一卒，功不唐捐 · 循序渐进，终成大医
+            </p>
+          </div>
+        </div>
+      </div>
+
       {/* 1. Main Action Hero Banner: Start Studying Immediately */}
       <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-emerald-50/90 via-white to-teal-50/70 border border-emerald-200/90 p-6 sm:p-8 shadow-sm">
         <div className="absolute top-0 right-0 -mt-12 -mr-12 w-64 h-64 bg-emerald-400/10 rounded-full blur-3xl pointer-events-none" />
@@ -88,11 +106,10 @@ export const DailyDashboard: React.FC<DailyDashboardProps> = ({
               </span>
             </div>
 
-            <h1 className="text-2xl sm:text-4xl font-serif font-extrabold text-stone-900 tracking-wide">
+            <h1 className="text-2xl sm:text-3xl font-serif font-extrabold text-stone-900 tracking-wide">
               {isCheckedInToday ? (
-                <span className="flex flex-col gap-1 sm:gap-1.5">
-                  <span>🎉 今日已打卡，</span>
-                  <span className="text-emerald-700 whitespace-nowrap">连胜达成！</span>
+                <span className="text-emerald-800 inline-block">
+                  🎉 今日已打卡，连胜达成！
                 </span>
               ) : (
                 '准备就绪，开启今日背诵'
